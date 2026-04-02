@@ -2,9 +2,9 @@ pipeline {
     // agent any: chạy trên agent mặc định (Jenkins có Docker socket thì stage con có thể dùng image Node)
     agent any
 
-    // triggers {
-    //     pollSCM('* * * * *')
-    // }
+    triggers {
+        pollSCM('H/3 * * * * *')
+    }
 
     options {
         // Giữ log build gom, tránh treo pipeline
